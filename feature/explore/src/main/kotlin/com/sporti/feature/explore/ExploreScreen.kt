@@ -165,7 +165,7 @@ private fun MatchCard(event: SportEvent, onFavorite: () -> Unit, modifier: Modif
 private fun TeamScoreRow(team: String, score: Int?, emphasized: Boolean) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Box(Modifier.size(34.dp).background(if (emphasized) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.surfaceVariant, CircleShape), contentAlignment = Alignment.Center) {
-            Text(team.take(1).uppercase(), fontWeight = FontWeight.Black, color = if (emphasized) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(team.take(1).uppercase(Locale.ENGLISH), fontWeight = FontWeight.Black, color = if (emphasized) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Text(team, modifier = Modifier.weight(1f).padding(horizontal = 12.dp), style = MaterialTheme.typography.titleMedium)
         Text(score?.toString() ?: "—", style = MaterialTheme.typography.headlineMedium)
@@ -202,7 +202,7 @@ private fun NewsCard(article: NewsArticle, onFavorite: () -> Unit, onOpen: () ->
             }
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(article.source.uppercase(Locale.getDefault()), modifier = Modifier.weight(1f), color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelMedium)
+                    Text(article.source.uppercase(Locale.ENGLISH), modifier = Modifier.weight(1f), color = MaterialTheme.colorScheme.primary, style = MaterialTheme.typography.labelMedium)
                     IconButton(onClick = onFavorite) {
                         Icon(painterResource(R.drawable.ic_heart), contentDescription = stringResource(if (article.isFavorite) com.sporti.feature.explore.R.string.remove_favorite else com.sporti.feature.explore.R.string.add_favorite), tint = if (article.isFavorite) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant)
                     }
@@ -215,7 +215,7 @@ private fun NewsCard(article: NewsArticle, onFavorite: () -> Unit, onOpen: () ->
     }
 }
 
-private val dateFormatter = DateTimeFormatter.ofPattern("dd MMM, EEE", Locale.forLanguageTag("ru"))
+private val dateFormatter = DateTimeFormatter.ofPattern("dd MMM, EEE", Locale.ENGLISH)
 private val timeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 private fun formatDate(value: Long): String = if (value == 0L) "" else Instant.ofEpochMilli(value).atZone(ZoneId.systemDefault()).format(dateFormatter)
 private fun formatTime(value: Long): String = if (value == 0L) "—" else Instant.ofEpochMilli(value).atZone(ZoneId.systemDefault()).format(timeFormatter)

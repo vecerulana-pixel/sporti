@@ -162,17 +162,21 @@ private fun DataRow(label: String, value: String) {
     }
 }
 
+@Composable
 private fun formatDuration(value: Long): String {
     val hours = value / 3_600_000
     val minutes = value / 60_000 % 60
-    return if (hours > 0) "${hours}ч ${minutes}м" else "${minutes}м"
+    return if (hours > 0) {
+        stringResource(com.sporti.feature.analytics.R.string.duration_hours_minutes, hours, minutes)
+    } else {
+        stringResource(com.sporti.feature.analytics.R.string.duration_minutes, minutes)
+    }
 }
 
-private fun formatStopwatch(value: Long): String = "%02d:%02d.%02d".format(value / 60_000, value / 1_000 % 60, value / 10 % 100)
+private fun formatStopwatch(value: Long): String = String.format(Locale.ENGLISH, "%02d:%02d.%02d", value / 60_000, value / 1_000 % 60, value / 10 % 100)
 
 private fun weekLabels(): List<String> {
-    val russian = Locale.forLanguageTag("ru")
-    val formatter = DateTimeFormatter.ofPattern("EE", russian)
+    val formatter = DateTimeFormatter.ofPattern("EE", Locale.ENGLISH)
     val today = LocalDate.now()
-    return (6 downTo 0).map { today.minusDays(it.toLong()).format(formatter).take(2).uppercase(russian) }
+    return (6 downTo 0).map { today.minusDays(it.toLong()).format(formatter).take(2).uppercase(Locale.ENGLISH) }
 }

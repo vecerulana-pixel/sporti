@@ -1,18 +1,18 @@
 <resources>
-    <string name="explore_title">Спорт сегодня</string>
-    <string name="explore_subtitle">Расписание и свежие новости</string>
-    <string name="refresh">Обновить данные</string>
-    <string name="refresh_error">Нет сети — показаны сохранённые данные</string>
-    <string name="matches">Матчи</string>
-    <string name="news">Новости</string>
-    <string name="all_leagues">Все лиги</string>
-    <string name="empty_matches_title">Пока нет матчей</string>
-    <string name="empty_matches_body">Проверьте подключение и нажмите «Обновить».</string>
-    <string name="empty_news_title">Новости не загружены</string>
-    <string name="empty_news_body">Лента сохранится после первого подключения к сети.</string>
+    <string name="explore_title">Sports today</string>
+    <string name="explore_subtitle">Fixtures and latest news</string>
+    <string name="refresh">Refresh data</string>
+    <string name="refresh_error">You’re offline — showing saved data</string>
+    <string name="matches">Matches</string>
+    <string name="news">News</string>
+    <string name="all_leagues">All leagues</string>
+    <string name="empty_matches_title">No matches yet</string>
+    <string name="empty_matches_body">Check your connection and tap Refresh.</string>
+    <string name="empty_news_title">News hasn’t loaded yet</string>
+    <string name="empty_news_body">The feed will be saved after the first online refresh.</string>
     <string name="live">LIVE</string>
-    <string name="finished">Завершён</string>
-    <string name="venue_unknown">Стадион уточняется</string>
-    <string name="add_favorite">Добавить в избранное</string>
-    <string name="remove_favorite">Удалить из избранного</string>
+    <string name="finished">Finished</string>
+    <string name="venue_unknown">Venue to be confirmed</string>
+    <string name="add_favorite">Add to favorites</string>
+    <string name="remove_favorite">Remove from favorites</string>
 </resources>

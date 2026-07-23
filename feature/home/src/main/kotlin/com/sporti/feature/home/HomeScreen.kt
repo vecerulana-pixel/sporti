@@ -210,7 +210,7 @@ private fun HomeMatchRow(event: SportEvent) {
     SportiCard(Modifier.fillMaxWidth()) {
         Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text(event.league.uppercase(Locale.getDefault()), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                Text(event.league.uppercase(Locale.ENGLISH), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
                 Text("${event.homeTeam} — ${event.awayTeam}", style = MaterialTheme.typography.titleMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
                 event.venue?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant, maxLines = 1) }
             }
@@ -227,7 +227,7 @@ private fun HomeNewsRow(article: NewsArticle) {
     SportiCard(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                Text(article.source.uppercase(Locale.getDefault()), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
+                Text(article.source.uppercase(Locale.ENGLISH), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary, modifier = Modifier.weight(1f))
                 Text(formatNewsDate(article.publishedAtMillis), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
             Text(article.title, style = MaterialTheme.typography.titleMedium, maxLines = 2, overflow = TextOverflow.Ellipsis)
@@ -240,10 +240,10 @@ private fun formatStopwatch(value: Long): String {
     val minutes = value / 60_000
     val seconds = value / 1_000 % 60
     val hundredths = value / 10 % 100
-    return "%02d:%02d.%02d".format(minutes, seconds, hundredths)
+    return String.format(Locale.ENGLISH, "%02d:%02d.%02d", minutes, seconds, hundredths)
 }
 
-private val eventDateFormatter = DateTimeFormatter.ofPattern("dd MMM", Locale.forLanguageTag("ru"))
+private val eventDateFormatter = DateTimeFormatter.ofPattern("dd MMM", Locale.ENGLISH)
 private val eventTimeFormatter = DateTimeFormatter.ofPattern("HH:mm")
 private fun formatEventDate(value: Long): String = Instant.ofEpochMilli(value).atZone(ZoneId.systemDefault()).format(eventDateFormatter)
 private fun formatEventTime(value: Long): String = Instant.ofEpochMilli(value).atZone(ZoneId.systemDefault()).format(eventTimeFormatter)

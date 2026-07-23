@@ -42,6 +42,8 @@ feature:analytics       — персональная аналитика
 
 Package ID: `com.tacktikcwin.app`. Firebase Realtime Database ожидает строковое значение в узле `url`; пустое или некорректное значение оставляет нативный интерфейс активным.
 
+Интерфейс приложения и форматирование дат доступны только на английском языке (`en`).
+
 ```bash
 ./gradlew :app:assembleDebug
 ./gradlew :app:bundleRelease

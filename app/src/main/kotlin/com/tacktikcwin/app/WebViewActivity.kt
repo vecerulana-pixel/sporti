@@ -406,7 +406,7 @@ class WebViewActivity : ComponentActivity() {
                     mimeType = download.mimeType,
                 )
             } else {
-                Toast.makeText(this, "Download permission denied", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.download_permission_denied, Toast.LENGTH_SHORT).show()
             }
             return
         }
@@ -479,7 +479,7 @@ class WebViewActivity : ComponentActivity() {
 
             val downloadManager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
             downloadManager.enqueue(request)
-            Toast.makeText(this, "Download started", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.download_started, Toast.LENGTH_SHORT).show()
         } catch (_: Throwable) {
             openExternalDownload(uri)
         }
@@ -489,7 +489,7 @@ class WebViewActivity : ComponentActivity() {
         try {
             startActivity(Intent(Intent.ACTION_VIEW, uri))
         } catch (_: Throwable) {
-            Toast.makeText(this, "Could not download file", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.download_failed, Toast.LENGTH_SHORT).show()
         }
     }
 

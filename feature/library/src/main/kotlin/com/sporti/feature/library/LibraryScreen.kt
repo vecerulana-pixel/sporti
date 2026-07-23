@@ -178,5 +178,5 @@ private fun NoteEditor(note: Note?, onDismiss: () -> Unit, onSave: (String, Stri
     )
 }
 
-private val noteDateFormatter = DateTimeFormatter.ofPattern("dd MMM · HH:mm", Locale.forLanguageTag("ru"))
+private val noteDateFormatter = DateTimeFormatter.ofPattern("dd MMM · HH:mm", Locale.ENGLISH)
 private fun formatDate(value: Long): String = Instant.ofEpochMilli(value).atZone(ZoneId.systemDefault()).format(noteDateFormatter)

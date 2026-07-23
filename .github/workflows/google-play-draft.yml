@@ -57,6 +57,13 @@ jobs:
           printf '%s' "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/signing/release.jks"
           chmod 600 "$RUNNER_TEMP/signing/release.jks"
 
+      - name: Verify English-only app UI
+        run: |
+          if rg -n '[А-Яа-яЁё]' app/src/main core/*/src/main feature/*/src/main; then
+            echo "Non-English app text detected. Move all user-facing copy to English resources."
+            exit 1
+          fi
+
       - name: Build and verify Android project
         env:
           ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/signing/release.jks

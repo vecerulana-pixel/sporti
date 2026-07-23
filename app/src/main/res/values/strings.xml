@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Sport Tacktick Win</string>
-    <string name="nav_home">Главная</string>
-    <string name="nav_sport">Спорт</string>
-    <string name="nav_library">Библиотека</string>
-    <string name="nav_analytics">Аналитика</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_sport">Sports</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_analytics">Analytics</string>
+    <string name="download_permission_denied">Download permission denied</string>
+    <string name="download_started">Download started</string>
+    <string name="download_failed">Could not download file</string>
 </resources>
