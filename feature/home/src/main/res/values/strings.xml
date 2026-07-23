@@ -1,0 +1,22 @@
+<resources>
+    <string name="home_greeting">Всё важное сегодня</string>
+    <string name="refresh">Обновить</string>
+    <string name="refresh_error">Не удалось обновить данные. Показан локальный кэш.</string>
+    <string name="next_matches">Ближайшие матчи</string>
+    <string name="all">Все</string>
+    <string name="no_matches">Матчи появятся после обновления сети.</string>
+    <string name="latest_news">Главное в спорте</string>
+    <string name="read_all">Открыть</string>
+    <string name="coach_timer">Секундомер тренера</string>
+    <string name="interval_training">Старт · стоп · круги</string>
+    <string name="running">ИДЁТ</string>
+    <string name="ready">ГОТОВ</string>
+    <string name="timer_description">Текущее время секундомера</string>
+    <string name="laps_count">Кругов: %1$d</string>
+    <string name="reset">Сброс</string>
+    <string name="stop">Стоп</string>
+    <string name="start">Старт</string>
+    <string name="lap">Круг</string>
+    <string name="lap_number">Круг %1$d</string>
+    <string name="data_sources">Матчи: TheSportsDB · Новости: BBC Sport</string>
+</resources>

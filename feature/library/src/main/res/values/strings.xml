@@ -1,0 +1,22 @@
+<resources>
+    <string name="library_title">Моя библиотека</string>
+    <string name="library_subtitle">Идеи, наблюдения и важные события</string>
+    <string name="notes_count">Заметки · %1$d</string>
+    <string name="favorites_count">Избранное · %1$d</string>
+    <string name="add_note">Добавить заметку</string>
+    <string name="no_notes_title">Запишите первую мысль</string>
+    <string name="no_notes_body">Тактика, итоги тренировки или детали матча — всё останется на устройстве.</string>
+    <string name="edit_note">Редактировать заметку</string>
+    <string name="delete_note">Удалить заметку</string>
+    <string name="no_favorites_title">Избранное пока пусто</string>
+    <string name="no_favorites_body">Нажмите на сердце у матча или новости, чтобы сохранить здесь.</string>
+    <string name="match">МАТЧ</string>
+    <string name="article">НОВОСТЬ</string>
+    <string name="remove_favorite">Удалить из избранного</string>
+    <string name="new_note">Новая заметка</string>
+    <string name="note_title">Заголовок</string>
+    <string name="untitled">Без названия</string>
+    <string name="note_body">Текст заметки</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+</resources>

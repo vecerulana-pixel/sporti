@@ -1,0 +1,16 @@
+<resources>
+    <string name="analytics_title">Моя аналитика</string>
+    <string name="analytics_subtitle">Только реальные данные из ваших действий</string>
+    <string name="training_time">Время тренировок</string>
+    <string name="sessions">Сессий</string>
+    <string name="best_lap">Лучший круг</string>
+    <string name="saved">Сохранено</string>
+    <string name="week_activity">Активность за 7 дней</string>
+    <string name="personal_base">Личная база</string>
+    <string name="notes_created">Создано заметок</string>
+    <string name="favorite_materials">Материалов в избранном</string>
+    <string name="total_laps_hint">Данные по кругам</string>
+    <string name="no_data">нет данных</string>
+    <string name="data_ready">собираются</string>
+    <string name="analytics_hint">Сессия попадает в аналитику после сброса секундомера. Заметки и избранное учитываются сразу.</string>
+</resources>
