@@ -37,14 +37,16 @@ feature:analytics       — персональная аналитика
 
 ## Сборка
 
-Требования: JDK 17 и Android SDK 36.
+Требования: JDK 17 и Android SDK 36. Приложение компилируется с `compileSdk 36` и нацелено на Android 16 через `targetSdk 36`.
 
 ```bash
 ./gradlew :app:assembleDebug
+./gradlew :app:bundleRelease
 ./gradlew testDebugUnitTest lintDebug
 ```
 
 Готовый debug APK: `app/build/outputs/apk/debug/app-debug.apk`.
+Готовый release AAB: `app/build/outputs/bundle/release/app-release.aab`. Перед загрузкой в Google Play его необходимо подписать ключом приложения.
 
 ## Privacy Policy
 
