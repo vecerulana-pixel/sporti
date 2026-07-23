@@ -14,6 +14,6 @@
     <string name="data_ready">собираются</string>
     <string name="analytics_hint">Сессия попадает в аналитику после сброса секундомера. Заметки и избранное учитываются сразу.</string>
     <string name="privacy_title">Конфиденциальность</string>
-    <string name="privacy_body">Как Sporti хранит и использует данные</string>
+    <string name="privacy_body">Как Sport Tacktick Win хранит и использует данные</string>
     <string name="open">Открыть</string>
 </resources>

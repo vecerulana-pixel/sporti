@@ -6,7 +6,7 @@
 
 ---
 
-**Project:** Sporti
+**Project:** Sport Tacktick Win
 **Generated:** 2026-07-23 19:30:13
 **Category:** Sports Team/Club
 

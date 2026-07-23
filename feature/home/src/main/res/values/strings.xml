@@ -1,4 +1,5 @@
 <resources>
+    <string name="brand_name">SPORT TACKTICK WIN</string>
     <string name="home_greeting">Всё важное сегодня</string>
     <string name="refresh">Обновить</string>
     <string name="refresh_error">Не удалось обновить данные. Показан локальный кэш.</string>

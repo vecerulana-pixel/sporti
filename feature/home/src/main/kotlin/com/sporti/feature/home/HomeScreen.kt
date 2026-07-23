@@ -99,7 +99,7 @@ private fun HomeScreen(
                 }
                 Column(modifier = Modifier.weight(1f).padding(start = 12.dp)) {
                     Text(stringResource(id = com.sporti.feature.home.R.string.home_greeting), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
-                    Text("SPORTI", style = MaterialTheme.typography.titleLarge)
+                    Text(stringResource(com.sporti.feature.home.R.string.brand_name), style = MaterialTheme.typography.titleLarge)
                 }
                 IconButton(onClick = onRefresh, enabled = !uiState.isRefreshing) {
                     if (uiState.isRefreshing) CircularProgressIndicator(Modifier.size(22.dp), strokeWidth = 2.dp)

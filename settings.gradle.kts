@@ -14,7 +14,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Sporti"
+rootProject.name = "SportTacktickWin"
 
 include(
     ":app",

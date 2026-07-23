@@ -42,7 +42,7 @@ class NewsRemoteDataSource @Inject constructor(
     suspend fun fetchNews(): List<NewsEntity> = withContext(Dispatchers.IO) {
         val request = Request.Builder()
             .url("https://feeds.bbci.co.uk/sport/rss.xml")
-            .header("User-Agent", "Sporti/1.0 Android RSS reader")
+            .header("User-Agent", "Sport-Tacktick-Win/1.0 Android RSS reader")
             .build()
         val xml = client.newCall(request).execute().use { response ->
             check(response.isSuccessful) { "BBC RSS returned ${response.code}" }
