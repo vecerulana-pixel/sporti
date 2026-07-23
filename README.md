@@ -45,3 +45,9 @@ feature:analytics       — персональная аналитика
 ```
 
 Готовый debug APK: `app/build/outputs/apk/debug/app-debug.apk`.
+
+## Privacy Policy
+
+The public English-language privacy policy for Google Play is available at:
+
+https://vecerulana-pixel.github.io/sporti/

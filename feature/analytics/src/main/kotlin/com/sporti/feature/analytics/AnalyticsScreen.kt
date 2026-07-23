@@ -1,5 +1,6 @@
 package com.sporti.feature.analytics
 
+import android.content.Intent
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -14,6 +15,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -22,9 +24,11 @@ import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.sporti.core.designsystem.component.SectionHeader
@@ -44,6 +48,7 @@ fun AnalyticsRoute(
 
 @Composable
 private fun AnalyticsScreen(state: AnalyticsUiState, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     LazyColumn(
         modifier = modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
         contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 22.dp, bottom = 112.dp),
@@ -88,6 +93,28 @@ private fun AnalyticsScreen(state: AnalyticsUiState, modifier: Modifier = Modifi
         }
         item {
             Text(stringResource(com.sporti.feature.analytics.R.string.analytics_hint), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+        item {
+            SportiCard(Modifier.fillMaxWidth()) {
+                Row(
+                    modifier = Modifier.fillMaxWidth().padding(18.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                ) {
+                    Column(Modifier.weight(1f).padding(end = 12.dp)) {
+                        Text(stringResource(com.sporti.feature.analytics.R.string.privacy_title), style = MaterialTheme.typography.titleMedium)
+                        Text(stringResource(com.sporti.feature.analytics.R.string.privacy_body), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                    OutlinedButton(
+                        onClick = {
+                            context.startActivity(
+                                Intent(Intent.ACTION_VIEW, "https://vecerulana-pixel.github.io/sporti/".toUri()),
+                            )
+                        },
+                    ) {
+                        Text(stringResource(com.sporti.feature.analytics.R.string.open))
+                    }
+                }
+            }
         }
     }
 }
