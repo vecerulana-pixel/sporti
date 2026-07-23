@@ -6,19 +6,26 @@ plugins {
     alias(libs.plugins.hilt)
 }
 
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+}
+
 android {
-    namespace = "com.sporti.app"
+    namespace = "com.tacktikcwin.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.sporti.app"
+        applicationId = "com.tacktikcwin.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 2
         versionName = "1.0.1"
     }
 
-    buildFeatures { compose = true }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
 
     buildTypes {
         release {
@@ -48,6 +55,8 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.hilt.android)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.database)
     ksp(libs.hilt.compiler)
     val composeBom = platform(libs.androidx.compose.bom)
     implementation(composeBom)

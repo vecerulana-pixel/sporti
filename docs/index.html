@@ -99,40 +99,43 @@
       <div class="hero">
         <p class="eyebrow">Legal &amp; Privacy</p>
         <h1>Privacy Policy</h1>
-        <p class="lede">This Privacy Policy explains how the Sport Tacktick Win Android application handles information when you follow sports events, read news, save favorites, write notes, use the coach stopwatch, and view personal analytics.</p>
+        <p class="lede">This Privacy Policy explains how the Sport Tacktick Win Android application handles information when you use its native sports features or a remotely configured website displayed inside the app.</p>
         <p class="effective">Effective date: July 23, 2026</p>
       </div>
     </header>
 
     <div class="summary" aria-label="Privacy at a glance">
-      <article><strong>No account required</strong><span>Sport Tacktick Win does not ask for your name, email address, phone number, or login.</span></article>
+      <article><strong>No native account required</strong><span>The native sports features do not ask for your name, email address, phone number, or login.</span></article>
       <article><strong>Local by default</strong><span>Notes, favorites, stopwatch sessions, and personal analytics remain on your device.</span></article>
-      <article><strong>No ads or tracking</strong><span>Sport Tacktick Win does not include advertising or third-party analytics SDKs.</span></article>
+      <article><strong>Web content is separate</strong><span>An activated website may use cookies, request permissions, or process data under its own privacy terms.</span></article>
     </div>
 
     <main>
       <section id="scope">
         <h2>1. Scope and developer</h2>
-        <p>This policy applies to <strong>Sport Tacktick Win</strong> (Android package <code>com.sporti.app</code>), developed and published by <strong>vecerulana-pixel</strong> ("we," "us," or "our"). It does not govern websites or services operated by third parties.</p>
+        <p>This policy applies to <strong>Sport Tacktick Win</strong> (Android package <code>com.tacktikcwin.app</code>), developed and published by <strong>vecerulana-pixel</strong> ("we," "us," or "our"). Third-party websites and services available through the app are governed by their own terms and privacy policies.</p>
       </section>
 
       <section id="data">
-        <h2>2. Information handled by Sport Tacktick Win</h2>
-        <p>Sport Tacktick Win does not create user accounts and does not directly collect your name, email address, phone number, contacts, precise location, payment details, advertising identifier, photos, microphone data, or health data.</p>
+        <h2>2. Information handled by native features</h2>
+        <p>The native sports features do not create user accounts and do not directly request your name, email address, phone number, contacts, payment details, advertising identifier, or health data.</p>
         <p>The following content is created or stored locally on your device:</p>
         <ul>
           <li>notes that you write in the app;</li>
           <li>matches and news items that you mark as favorites;</li>
           <li>stopwatch durations, lap times, and the time a training session was saved;</li>
-          <li>personal statistics calculated from your locally stored activity; and</li>
-          <li>cached match schedules and news items downloaded for offline access.</li>
+          <li>personal statistics calculated from your locally stored activity;</li>
+          <li>cached match schedules and news items downloaded for offline access; and</li>
+          <li>the latest valid website address opened in the in-app browser.</li>
         </ul>
         <p>This locally stored content is not uploaded to us and is not used to identify you.</p>
       </section>
 
       <section id="network">
         <h2>3. Network access and third-party services</h2>
-        <p>Sport Tacktick Win uses an internet connection to download sports schedules from <a href="https://www.thesportsdb.com/" rel="noopener noreferrer">TheSportsDB</a> and sports headlines from <a href="https://www.bbc.co.uk/sport" rel="noopener noreferrer">BBC Sport</a>. When you open a news article, it is opened in your web browser and the destination website's own terms and privacy policy apply.</p>
+        <p>Sport Tacktick Win uses an internet connection to download sports schedules from <a href="https://www.thesportsdb.com/" rel="noopener noreferrer">TheSportsDB</a> and sports headlines from <a href="https://www.bbc.co.uk/sport" rel="noopener noreferrer">BBC Sport</a>. When you open a news article, the destination website's own terms and privacy policy apply.</p>
+        <p>The app also reads the <code>url</code> configuration value from <strong>Firebase Realtime Database</strong>. If that value is a valid web address, the app stores it locally and displays the website in an embedded browser. Google Firebase may process connection and technical information needed to provide this service under the <a href="https://firebase.google.com/support/privacy" rel="noopener noreferrer">Firebase Privacy and Security documentation</a>.</p>
+        <p>An activated website may receive information you submit to it, use first-party or third-party cookies, request access to location, camera, or microphone, initiate file uploads or downloads, and process standard network information. That processing occurs directly between your device and the website and is governed by the website operator's privacy policy.</p>
         <p>As with any internet request, these service operators and network infrastructure may automatically receive limited technical information such as your IP address, request date and time, and a standard network user-agent value. We do not receive, combine, or retain that technical information.</p>
         <p>For more information, review the <a href="https://www.thesportsdb.com/docs_privacy_policy.php" rel="noopener noreferrer">TheSportsDB Privacy Policy</a> and the <a href="https://www.bbc.co.uk/usingthebbc/privacy/" rel="noopener noreferrer">BBC Privacy and Cookies Policy</a>.</p>
         <p>This policy page is hosted by GitHub Pages. When you visit it, GitHub may process standard connection and usage information under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener noreferrer">GitHub General Privacy Statement</a>.</p>
@@ -140,33 +143,34 @@
 
       <section id="use-sharing">
         <h2>4. How information is used and shared</h2>
-        <p>Local information is used only to provide the features you request: saving notes and favorites, recording stopwatch sessions, calculating personal analytics, and making downloaded content available offline.</p>
-        <p>We do not sell, rent, monetize, or share your locally stored content. Sport Tacktick Win does not display personalized advertising and does not use cross-app tracking.</p>
+        <p>Local native information is used only to provide the features you request: saving notes and favorites, recording stopwatch sessions, calculating personal analytics, restoring the latest embedded page, and making downloaded content available offline.</p>
+        <p>We do not sell, rent, monetize, or upload your locally stored native notes, favorites, or stopwatch history. Information entered into an activated website is sent to that website rather than to the native sports data store and may be processed or shared as described by the website operator.</p>
       </section>
 
       <section id="permissions">
         <h2>5. Device permissions</h2>
-        <p>Sport Tacktick Win requests only the Android <strong>internet permission</strong>, which is required to retrieve match and news content. It does not request access to your location, contacts, camera, microphone, call logs, messages, or shared device storage.</p>
+        <p>Sport Tacktick Win declares internet and network-state access to retrieve native content, Firebase configuration, and web pages. The embedded browser can request <strong>approximate or precise location</strong>, <strong>camera</strong>, and <strong>microphone</strong> access when a website needs those capabilities. Android displays a runtime permission prompt, and access is not granted unless you approve it.</p>
+        <p>The file chooser can open files you select or capture a new photo. Downloads are handled by Android DownloadManager. A legacy write-storage permission is declared only for Android 9 (API 28) and earlier. The app does not request contacts, call logs, or message access.</p>
       </section>
 
       <section id="security">
         <h2>6. Security</h2>
-        <p>Sport Tacktick Win stores local information in the app's private Android storage, which is isolated by the operating system. Supported network requests use HTTPS encryption in transit. No security method is perfect, but we limit data handling to what is necessary for the app's functions.</p>
+        <p>Sport Tacktick Win stores native local information and the cached website address in the app's private Android storage, which is isolated by the operating system. Supported native service requests use HTTPS. The remote configuration may specify either an HTTPS or HTTP website; traffic to an HTTP website is not encrypted in transit. Website cookies are managed by Android WebView. No security method is perfect, so review the active website before submitting sensitive information.</p>
       </section>
 
       <section id="retention">
         <h2>7. Retention and deletion</h2>
-        <p>Notes, favorites, cached content, and stopwatch sessions remain on your device until you delete them through the available app controls, clear Sport Tacktick Win's storage in Android settings, or uninstall the app. Clearing app storage or uninstalling Sport Tacktick Win permanently removes all app-managed local information from that device. Because we do not operate user accounts or receive this local information, there is no server-side account or personal database for us to delete.</p>
+        <p>Notes, favorites, cached native content, stopwatch sessions, the latest embedded page address, and WebView site data remain on your device until removed through available controls, Android settings, website controls, or by uninstalling the app. Clearing app storage or uninstalling Sport Tacktick Win removes app-managed local information from that device. Data already submitted to an activated website must be deleted through that website operator.</p>
       </section>
 
       <section id="children">
         <h2>8. Children's privacy</h2>
-        <p>Sport Tacktick Win is a general-audience sports utility and is not directed to children under 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information through a linked third-party service, please contact that service and notify us using the contact method below.</p>
+        <p>Sport Tacktick Win's native sports features are intended for a general audience and are not directed to children under 13. Any activated website must be evaluated separately by its operator. If you believe a child has provided personal information through a third-party service, please contact that service and notify us using the contact method below.</p>
       </section>
 
       <section id="international">
         <h2>9. International processing</h2>
-        <p>The third-party sports and news services used by Sport Tacktick Win may operate servers in different countries. Their handling of network information is governed by their own privacy policies and applicable laws.</p>
+        <p>Firebase, third-party sports and news services, and an activated website may operate servers in different countries. Their handling of information is governed by their own privacy policies and applicable laws.</p>
       </section>
 
       <section id="changes">
@@ -186,11 +190,13 @@
           <table>
             <thead><tr><th>Category</th><th>Sport Tacktick Win practice</th><th>Purpose</th></tr></thead>
             <tbody>
-              <tr><td>Personal data collected by the developer</td><td>None</td><td>Not applicable</td></tr>
-              <tr><td>Personal data shared by the developer</td><td>None</td><td>Not applicable</td></tr>
+              <tr><td>Native sports data collected by the developer</td><td>None directly</td><td>Native features operate without an account</td></tr>
+              <tr><td>Firebase configuration lookup</td><td>Firebase may process connection and technical information</td><td>Retrieve the optional website address</td></tr>
+              <tr><td>Embedded website data</td><td>Depends on the active website and user interaction</td><td>Provide the remotely configured web experience</td></tr>
               <tr><td>User-generated content</td><td>Stored only on the device</td><td>Notes and personal organization</td></tr>
               <tr><td>App activity</td><td>Stored only on the device</td><td>Stopwatch history and personal analytics</td></tr>
-              <tr><td>Data encrypted in transit</td><td>Yes, for supported network requests</td><td>Match and news retrieval</td></tr>
+              <tr><td>Optional sensitive permissions</td><td>Location, camera, and microphone only after an Android permission prompt</td><td>Website-requested functionality</td></tr>
+              <tr><td>Data encrypted in transit</td><td>Native services use HTTPS; a configured HTTP website is not encrypted</td><td>Network content retrieval</td></tr>
               <tr><td>Account deletion</td><td>No account is created</td><td>Local data can be removed in the app, Android settings, or by uninstalling</td></tr>
             </tbody>
           </table>
